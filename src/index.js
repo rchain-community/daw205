@@ -102,9 +102,9 @@ function WalletImpl(initClear, locked = {}) {
  * @param {REVAddress} owner
  * @param {Asset} idVerification
  *
- * ISSUE: Uint8array?
  * @typedef {string} REVAddress
  * @typedef {string} HumanFriendlyKey
+ * ISSUE: Uint8array?
  * @typedef {unknown} Asset
  * @typedef {Record<REVAddress, [HumanFriendlyKey, Asset]>} Contents
  *

@@ -107,7 +107,16 @@ function WalletImpl(initClear, locked = {}) {
  * @typedef {string} HumanFriendlyKey
  * @typedef {unknown} Asset
  * @typedef {Record<REVAddress, [HumanFriendlyKey, Asset]>} Contents
+ *
+ * @typedef {[REVAddress, REVAddress]} Link
  */
 export function Wallet(owner, idVerification) {
   return WalletImpl({ [owner]: ['owner', idVerification] });
 }
+
+/**
+ * @typedef {[Asset, Sig]} Attestation<Sig>
+ * @template Sig
+ *
+ * ISSUE: Sig <: { verify(Asset): boolean }
+ */
